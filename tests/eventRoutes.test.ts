@@ -4,23 +4,23 @@ import router from "../src/api/v1/routes/eventRoutes";
 import * as controller from "../src/api/v1/controllers/eventController";
 
 // Mock the entire controller
-jest.mock("./path-to-controller");
+jest.mock("../src/api/v1/controllers/eventController.ts");
 
 const app = express();
 app.use(express.json());
-app.use("/api/v1", routes);
+app.use("/api/v1", router);
 
-describe("Route Name", () => {
+describe("Get all events", () => {
 	afterEach(() => {
 		jest.clearAllMocks();
 	});
 
-	describe("GET /api/v1/resource", () => {
-		it("should call getAll controller", async () => {
-			await request(app).get("/api/v1/resource");
-			expect(controller.getAll).toHaveBeenCalled();
-		});
+describe("GET /api/v1/events", () => {
+	it("should call getAll controller", async () => {
+		await request(app).get("/api/v1/resource");
+		expect(controller.getAll).toHaveBeenCalled();
 	});
+});
 
 	describe("POST /api/v1/resource", () => {
 		it("should call create controller", async () => {
