@@ -17,7 +17,7 @@ export interface Attendee {
 
 // Events
 
-let event: Event [] = [
+export let event: Event [] = [
     {
         id: 1,
         name: "Tech Conference 2025",
@@ -43,7 +43,7 @@ let event: Event [] = [
     }
 ];
 
-let attendee: Attendee [] = [
+export let attendee: Attendee [] = [
     {
         id: 1,
         name: "Jordan Smith",
