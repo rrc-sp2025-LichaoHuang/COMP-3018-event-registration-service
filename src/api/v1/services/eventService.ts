@@ -1,5 +1,18 @@
-import { Event } from "../models/eventModules";
+import { Event, Attendee } from "../models/eventModules";
 
+
+let attendee: Attendee[] = [
+  {
+    id: 1,
+    name: "Jordan Smith",
+    email: "jordan.smith@email.com"
+  },
+  {
+    id: 2,
+    name: "Alex Chen",
+    email: "alex.chen@email.com"
+  }
+]
 /**
  * In-memory event data (demo purpose)
  */
